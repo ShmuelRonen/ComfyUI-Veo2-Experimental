@@ -2,7 +2,7 @@
 
 A custom node extension for ComfyUI that integrates Google's Veo 2 text-to-video generation capabilities.
 
-![image](https://github.com/user-attachments/assets/6624d060-90d3-462c-b053-459c68c40726)
+![image](https://github.com/user-attachments/assets/fd3155f2-5860-4bba-bfc3-942a2284eda3)
 
 
 ## Overview of Veo 2
