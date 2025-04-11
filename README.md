@@ -44,7 +44,13 @@ Veo 2 is designed to generate high-quality videos from text or image prompts, su
    pip install google-genai
    ```
 
-2. #### Create a `.env` file in the extension directory with your Google API key:
+2.  Get your free API key from Google AI Studio:
+   - Visit [Google AI Studio](https://aistudio.google.com/prompts/new_chat)
+   - Log in with your Google account
+   - Click on "Get API key" or go to settings
+   - Create a new API key
+   - Copy the API key for use in .env file
+   - #### Create a `.env` file in the extension directory with your Google API key:
    ```
    GOOGLE_API_KEY=your_google_api_key_here
    ```
