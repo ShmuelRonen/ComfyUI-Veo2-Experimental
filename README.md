@@ -41,7 +41,7 @@ Veo 2 is designed to generate high-quality videos from text or image prompts, su
 
 2. Install the Google Generative AI SDK:
    ```
-   pip install google-genai
+   pip install --upgrade google-genai
    ```
 
 2.  Get your free API key from Google AI Studio:
