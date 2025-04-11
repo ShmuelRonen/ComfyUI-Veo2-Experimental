@@ -1,0 +1,211 @@
+/* ComfyUI-Veo2-Experimental CSS Styles */
+
+/* Video container styling */
+.veo-video-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Video element styling */
+.veo-video {
+  width: 100%;
+  border-radius: 4px;
+  max-height: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Video controls customization */
+.veo-video::-webkit-media-controls {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 4px 4px;
+}
+
+/* Video metadata display */
+.veo-metadata {
+  width: 100%;
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+  padding: 5px;
+  border-top: 1px solid #eee;
+}
+
+/* Loading indicator for video generation */
+.veo-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.veo-loading-spinner {
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 5px solid #4CAF50;
+  width: 40px;
+  height: 40px;
+  animation: veo-spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes veo-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.veo-loading-text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Progress bar for video generation */
+.veo-progress-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.veo-progress-bar {
+  height: 10px;
+  background-color: #4CAF50;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Custom styling for node inputs */
+.veo-node .comfy-multiline-input {
+  min-height: 80px;
+  font-family: monospace;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Styling for Veo node headers */
+.veo-node-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.veo-node-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.veo-node-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Toggle switch for enhance_prompt option */
+.veo-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+.veo-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.veo-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.veo-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .veo-toggle-slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .veo-toggle-slider:before {
+  transform: translateX(32px);
+}
+
+/* Custom styling for the negative prompt section */
+.veo-negative-prompt {
+  margin-top: 10px;
+  padding: 5px;
+  border-top: 1px dashed #ddd;
+}
+
+.veo-negative-prompt-label {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .veo-video {
+    max-height: 300px;
+  }
+}
+
+/* Dark theme compatibility */
+.comfy-dark-theme .veo-video-container {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.comfy-dark-theme .veo-loading {
+  background-color: #2a2a2a;
+}
+
+.comfy-dark-theme .veo-loading-text {
+  color: #ddd;
+}
+
+.comfy-dark-theme .veo-progress-container {
+  background-color: #333;
+}
+
+.comfy-dark-theme .veo-metadata {
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+
+.comfy-dark-theme .veo-negative-prompt-label {
+  color: #999;
+}
+
+.comfy-dark-theme .veo-node .comfy-multiline-input {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ddd;
+}
