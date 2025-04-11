@@ -1,0 +1,311 @@
+{
+  "id": "e47d62ec-0732-4a30-b55f-82df956cb19d",
+  "revision": 0,
+  "last_node_id": 34,
+  "last_link_id": 45,
+  "nodes": [
+    {
+      "id": 30,
+      "type": "FILM VFI",
+      "pos": [
+        2238.849365234375,
+        -343.0510559082031
+      ],
+      "size": [
+        332.57598876953125,
+        131.7821502685547
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 37
+        },
+        {
+          "name": "optional_interpolation_states",
+          "shape": 7,
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-frame-interpolation",
+        "ver": "c336f7184cb1ac1243381e725fea1ad2c0a10c09",
+        "Node name for S&R": "FILM VFI"
+      },
+      "widgets_values": [
+        "film_net_fp32.pt",
+        25,
+        2
+      ]
+    },
+    {
+      "id": 9,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2237.23095703125,
+        -137.91407775878906
+      ],
+      "size": [
+        328.9571533203125,
+        895.5443725585938
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 38
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4c7858ddd5126f7293dc3c9f6e0fc4c263cde079",
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 48,
+        "loop_count": 0,
+        "filename_prefix": "veo",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "veo_00019.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 48,
+            "workflow": "veo_00019.png",
+            "fullpath": "D:\\ComfyUI_windows\\ComfyUI\\output\\veo_00019.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 23,
+      "type": "VeoToVHS",
+      "pos": [
+        1934.3809814453125,
+        -346.0785217285156
+      ],
+      "size": [
+        193.34722900390625,
+        55.52738952636719
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_paths",
+          "type": "VEO_VIDEO",
+          "link": 44
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VeoToVHS"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 20,
+      "type": "VeoTextToVideo",
+      "pos": [
+        1712.308837890625,
+        -61.47734451293945
+      ],
+      "size": [
+        400,
+        238
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_paths",
+          "type": "VEO_VIDEO",
+          "links": [
+            44
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VeoTextToVideo"
+      },
+      "widgets_values": [
+        "",
+        "9:16",
+        "allow_adult",
+        8,
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 34,
+      "type": "String Literal",
+      "pos": [
+        1195.8341064453125,
+        -41.56914138793945
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "image-saver",
+        "ver": "65e6903eff274a50f8b5cd768f0f96baf37baea1",
+        "Node name for S&R": "String Literal"
+      },
+      "widgets_values": [
+        "In a realm where shadows and light intertwine, a young woman stands as the embodiment of mystery and grace. Her name is Elara, a queen of the ethereal, draped in a flowing grey gown that cascades like a waterfall of moonlight. The fabric, with its subtle folds and drapes, seems to breathe with life, as if it were a living entity itself.\n\nElara's face is a canvas of contrasts—dark, dramatic makeup accentuates her eyes, which are pools of deep, fathomless blue. Her lips, painted a bold red, add a touch of fire to her otherwise somber visage. A delicate tiara rests upon her head, a symbol of her regal status, while a necklace of intricate, ancient designs adorns her neck, whispering tales of forgotten times.\n\nThe backdrop is a swirling vortex of dark, muted colors, a smoky mist that seems to pulse with a life of its own. It frames her like a halo, creating a sense of depth and mystery. Elara's posture is one of poised elegance, her left hand gently holding the edge of her gown, while her right arm extends outward, as if she were about to take flight.\n\nAs the scene unfolds, Elara begins to dance, her movements fluid and graceful, yet imbued with a subtle intensity. The fabric of her gown billows around her, creating a dynamic interplay of light and shadow. The dance is not just a physical expression but a journey into the depths of her soul, a silent conversation with the shadows that surround her.\n\nThe camera captures every nuance of her expression, every flicker of her eyes, and the subtle shifts in her posture. It is a visual symphony, a dance of emotions that speaks to the heart and soul. The audience is drawn into her world, a world where the ethereal and the earthly coexist in a delicate balance.\n\nAs the final note of the music fades, Elara stands still, her eyes closed, her breath steady. The mist around her begins to clear, revealing a soft, ethereal light that bathes her in a gentle glow. She is no longer just a queen; she is a goddess, a spirit of the night, a dancer of the soul.\n\nIn this moment, time stands still, and the world is left in awe of the beauty and mystery that Elara embodies. The dance is over, but the memory of it lingers, a testament to the power of art and the magic of the human spirit."
+      ]
+    }
+  ],
+  "links": [
+    [
+      37,
+      23,
+      0,
+      30,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      30,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      44,
+      20,
+      0,
+      23,
+      0,
+      "VEO_VIDEO"
+    ],
+    [
+      45,
+      34,
+      0,
+      20,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Veo2 ComfyUI",
+      "bounding": [
+        1092.8580322265625,
+        -428.2092590332031,
+        1514.2139892578125,
+        1234.10791015625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7972024500000019,
+      "offset": [
+        -420.7324621724935,
+        511.1643249839338
+      ]
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
