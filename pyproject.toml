@@ -1,0 +1,15 @@
+[project]
+name = "veo2-experimental"
+description = "A custom node extension for ComfyUI that integrates Google's Veo 2 text-to-video generation capabilities."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["google-genai>=0.2.0"]
+
+[project.urls]
+Repository = "https://github.com/ShmuelRonen/ComfyUI-Veo2-Experimental"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Veo2-Experimental"
+Icon = ""
