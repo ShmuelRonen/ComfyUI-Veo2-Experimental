@@ -9,7 +9,7 @@ A custom node extension for ComfyUI that integrates Google's Veo 2 text-to-video
 
 Veo 2 is designed to generate high-quality videos from text or image prompts, supporting a variety of cinematic and visual styles. It excels in rendering intricate details across frames and offers features like real-world physics simulation and nuanced motion accuracy.
 
-> ⚠️ **Important:** <span style="color:red">This feature may not yet be available in your country. You may also be charged by Google for additional usage.</span>
+> ⚠️ **Important:** <span style="color:red">This feature may not yet be available in your country. You may also be charged by Google for additional usage 0.35$ per sec.</span>
 
 ### Key Features of Veo 2
 
